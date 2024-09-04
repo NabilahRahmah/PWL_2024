@@ -20,7 +20,7 @@
         </div>
         <div class="ktp-info-item flex mb-1">
             <span class="ktp-info-label w-36">Nama</span>
-            <span>: NABILAH RAHMAH D</span>
+            <span>: NABILAH RAHMAH DIYANAH</span>
         </div>
         <div class="ktp-info-item flex mb-1">
             <span class="ktp-info-label w-36">Tempat / Tgl Lahir</span>
