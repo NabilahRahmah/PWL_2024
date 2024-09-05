@@ -1,13 +1,5 @@
 <?php
 
-use App\Http\Controllers\AnggotaController;
-use App\Http\Controllers\CRUDPhoto;
-use App\Http\Controllers\CRUDController;
-use App\Http\Controllers\halloController;
-use App\Http\Controllers\CatController;
-use App\Http\Controllers\KategoriController;
-use App\Http\Controllers\LevelController;
-use App\Http\Controllers\PageController;
 use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\ArticlesController;
 use App\Http\Controllers\HomeController;
