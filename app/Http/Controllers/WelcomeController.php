@@ -6,9 +6,9 @@ use Illuminate\Http\Request;
 
 class WelcomeController extends Controller
 {
-    public function hello() {
-        return 'Hello World';
-        }
+    // public function hello() {
+    //     return 'Hello World';
+    //     }
     public function index() {
         return 'Selamat Datang';
     }
@@ -18,4 +18,19 @@ class WelcomeController extends Controller
     public function articles($id){
         return 'Halaman Dengan Id - '.$id;
     }
+
+    //Praktikum3
+    // public function greeting(){
+    //     return view('blog.hello', ['name' => 'Bila']);
+    //     }
+
+    //No11
+    public function hello(){
+        return('Hello World');
+        }
+        public function greeting(){
+        return view('blog.hello')
+        ->with('name','Nabila')
+        ->with('occupation','Astronaut');
+        }
 }

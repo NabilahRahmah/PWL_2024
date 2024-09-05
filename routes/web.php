@@ -84,3 +84,11 @@ Route::get('/articles2/{id}',ArticlesController::class);
 Route::resource('photos', PhotoController::class);
 Route::resource('photos', PhotoController::class)->only(['index', 'show']);
 Route::resource('photos', PhotoController::class)->except(['create', 'store', 'update', 'destroy']);
+
+//Praktikum 3 No2
+Route::get('/greeting', function () {
+    return view('hello', ['name' => 'Nabila']);
+});
+
+//Praktikum 3 No9
+Route::get('/greeting', [WelcomeController::class,'greeting']);
