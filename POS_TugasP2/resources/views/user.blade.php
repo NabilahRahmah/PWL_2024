@@ -6,12 +6,22 @@
     <title>Profil Pengguna</title>
 </head>
 <body>
-    <h1>Profil Pengguna</h1>
-    <ul>
-        <li><strong>ID:</strong> {{ $user['id'] }}</li>
-        <li><strong>Nama:</strong> {{ $user['name'] }}</li>
-        <li><strong>Email:</strong> {{ $user['email'] }}</li>
-        <li><strong>Umur:</strong> {{ $user['age'] }} tahun</li>
-    </ul>
+    <h1>Data User</h1>
+        <table border="1" cellpadding="2" cellspacing="0">
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Nama</th>
+            <th>ID Level Pengguna</th>
+        </tr>
+        @foreach ($data as $d)
+        
+        <tr>
+            <td>{{ $d->user_id }}</td>
+            <td>{{ $d->username }}</td>
+            <td>{{ $d->nama }}</td>
+            <td>{{$d->level_id }}</td>
+        </tr>
+        @endforeach
 </body>
 </html>
