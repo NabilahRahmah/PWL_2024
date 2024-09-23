@@ -60,10 +60,38 @@ class UserController extends Controller
     // return view('user', ['data' => $user]);
 
     //Js4 Prak 2.1
-        $user = UserModel::findOr(1, ['username','nama'], function (){
-            abort(404);
-        });
-        return view('user', ['data' => $user]);
+        // $user = UserModel::findOr(1, ['username','nama'], function (){
+        //     abort(404);
+        // });
+        // return view('user', ['data' => $user]);
 
+    //Js4 Prak 2.2
+        // $user = UserModel::where('username', 'manager9')->firstOrFail();
+        // return view('user', ['data' => $user]);
+
+    //Js4 Prak 2.3
+        // $user = UserModel::where('level_id', 2)->count('level_id');
+        // return view('user', ['data' => $user]);
+
+    //Js4 Prak 2.4
+    //     $user = UserModel::firstOrCreate(
+    //     [
+    //         'username' => 'manager',
+    //         'nama' => 'Manager',
+    //     ],
+    // );    
+    //     return view('user', ['data' => $user]);
+    
+    //Langkah 8
+    $user = UserModel::firstOrNew(
+            [
+                'username' => 'manager33',
+                'nama' => 'Manager Tiga Tiga',
+                'password' => Hash::make('12345'),
+                'level_id' => 2
+            ],
+        );
+        $user -> save();
+        return view('user', ['data' => $user]);
     }
 }
