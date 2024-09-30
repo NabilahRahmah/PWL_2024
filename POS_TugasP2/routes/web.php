@@ -1,12 +1,11 @@
 <?php
 
-use App\Http\Controllers\SaleController;
-use App\Http\Controllers\UserController;
-use App\Http\Controllers\ProductController;
-use App\Http\Controllers\HomeController;
-use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\LevelController;
 use App\Http\Controllers\KategoriController;
+use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -38,9 +37,9 @@ use App\Http\Controllers\KategoriController;
 
 
 //JOBSHEET 3 PRAKTIKUM 6
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('/level', [LevelController::class, 'index']);
 Route::get('/kategori', [KategoriController::class, 'index']);
@@ -77,3 +76,10 @@ Route::get('/user', [UserController::class, 'index']);
 // Route::get('/ViewUser/{id}/name/{name}', [UserController::class, 'cust'])->name('cust');
 
 // Route::get('/ViewSales', [SalesController::class, 'index'])->name('index');
+
+
+//JOBSHEET 4 PRAKTIKUM 2.6
+// Route::get('/level', [LevelController::class, 'index']);
+// Route::get('/kategori', [KategoriController::class, 'index']);
+// Route::get('/user', [UserController::class, 'index']);
+Route::get('/user/tambah', [UserController::class,'tambah']);

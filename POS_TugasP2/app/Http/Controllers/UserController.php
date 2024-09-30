@@ -74,6 +74,16 @@ class UserController extends Controller
         // return view('user', ['data' => $user]);
 
     //Js4 Prak 2.4
+    // $user = UserModel::firstOrCreate(
+        //     [
+        //         'username' => 'manager22',
+        //         'nama' => 'Manager Dua Dua',
+        //         'password' => Hash::make('12345'),
+        //         'level_id' => 2
+        //     ],
+        // );
+        // return view('user', ['data' => $user]);
+        
     //     $user = UserModel::firstOrCreate(
     //     [
     //         'username' => 'manager',
@@ -83,15 +93,67 @@ class UserController extends Controller
     //     return view('user', ['data' => $user]);
     
     //Langkah 8
-    $user = UserModel::firstOrNew(
-            [
-                'username' => 'manager33',
-                'nama' => 'Manager Tiga Tiga',
-                'password' => Hash::make('12345'),
-                'level_id' => 2
-            ],
-        );
-        $user -> save();
+    // $user = UserModel::firstOrNew(
+    //         [
+    //             'username' => 'manager33',
+    //             'nama' => 'Manager Tiga Tiga',
+    //             'password' => Hash::make('12345'),
+    //             'level_id' => 2
+    //         ],
+    //     );
+    //     $user -> save();
+    //     return view('user', ['data' => $user]);
+
+        //Praktikum 2.5 langkah 1
+        // $user = UserModel::FirstOrCreate( [
+        // 'username' => 'manager55',
+        // 'nama' => 'Manager Lima Lima',
+        // 'password' => Hash::make('12345'),
+        // 'level_id'=> 2
+        // ]);
+        // $user -> username='Manager 56';
+
+        // $user->isDirty();
+        // $user->isDirty( 'username');
+        // $user->isDirty('nama');
+        // $user->isDirty( ['nama','username']);
+
+        // $user->isClean();
+        // $user->isClean( 'username');
+        // $user->isClean('nama');
+        // $user->isClean(['nama','username']);
+
+        // $user->save();
+        // $user->isDirty();
+        // $user->isClean();
+
+        // dd($user->isDirty());
+
+
+        //Praktikum 2.5 Langkah 3
+        // $user = UserModel::create([
+        //     'username' => 'manager11',
+        //     'nama' => 'Manager11',
+        //     'password' => Hash::make('12345'),
+        //     'level_id' => 2,
+        // ]);
+
+        // $user->username = 'manager12';
+
+        // $user->save();
+
+        // $user->wasChanged(); //true
+        // $user->wasChanged('username'); //true
+        // $user->wasChanged('username', 'level_id'); //true
+        // $user->wasChanged('nama'); //false
+        // dd($user->wasChanged(['nama', 'username'])); //true
+
+        //JS4 PRAK 2.6
+        $user = UserModel::all();
         return view('user', ['data' => $user]);
+    }
+
+    public function tambah(){
+        return view('user_tambah');
     }
 }

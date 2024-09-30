@@ -19,5 +19,5 @@ class UserModel extends Model
     
     // JS 4 PRAK1
         // protected $fillable = ['level_id', 'username', 'nama', 'password'];
-        protected $fillable = ['level_id', 'username', 'nama'];
+        protected $fillable = ['level_id', 'username', 'nama', 'password'];
 }
