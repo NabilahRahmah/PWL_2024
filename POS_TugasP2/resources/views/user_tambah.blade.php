@@ -1,27 +1,28 @@
-
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Tambah User</title>
-    </head>
-    <body>
-        <h1>Form Tambah Data User</h1>
-        <form method="post" action="/user/tambah_simpan">
-            {{ csrf_field() }}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah User</title>
+</head>
+<body>
+    <h1>Form Tambah Data User</h1>
+    <form action="/user/tambah_simpan" method="post">
+        {{csrf_field()}}
 
-            <label>Username</label>
-            <input type="text" name='username' placeholder="Masukan Username">
-            <br>
-            <label>Nama</label>
-            <input type="text" name='nama' placeholder="Masukan Nama">
-            <br>
-            <label>Password</label>
-            <input type="password" name='password' placeholder="Masukan Password">
-            <br>
-            <label>Level ID</label>
-            <input type="number" name='level_id' placeholder="Masukan Id Level">
-            <br><br>
-            <input type="submit" class="btn btn-success" value="Simpan">
-        </form>
-    </body>
+        <label>Username</label>
+        <input type="text" name="username" placeholder="Masukkan Username">
+        <br>
+        <label>Nama</label>
+        <input type="text" name="nama" placeholder="Masukkan nama">
+        <br>
+        <label>Password</label>
+        <input type="password" name="password" placeholder="Masukkan password">
+        <br>
+        <label>Level ID</label>
+        <input type="number" name="level_id" placeholder="Masukkan ID Level">
+        <br><br>
+        <input type="submit" class="btn btn-success" value="Simpan">
+    </form>    
+</body>
 </html>

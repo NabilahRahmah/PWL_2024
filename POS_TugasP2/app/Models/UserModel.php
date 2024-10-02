@@ -16,8 +16,13 @@ class UserModel extends Model
      * 
      * @var array
      */
-    
+
     // JS 4 PRAK1
         // protected $fillable = ['level_id', 'username', 'nama', 'password'];
         protected $fillable = ['level_id', 'username', 'nama', 'password'];
+
+    //JS 4 PRAKTIKUM 2.7
+    public function level(): BelongsTo {
+        return $this->belongsTo(LevelModel::class, 'level_id', 'level_id');
+    }    
 }
